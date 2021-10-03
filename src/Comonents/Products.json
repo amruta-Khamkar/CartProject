@@ -1,0 +1,145 @@
+{
+ "Products":[
+    {   
+        "id":1,
+       "ProductName":"LeatProJacket",
+        "Price":3999,
+        "Quantity":1,
+        "imgsrc":"../Imgs/shop1.jfif"
+    },
+    {   
+        "id":2,
+        "ProductName":"High Shooes",
+        "Price":1999,
+        "Quantity":1,
+        "imgsrc":"../Imgs/shop2.jpeg"
+    },
+    {   
+        "id":3,
+        "ProductName":"Treking Bag",
+        "Price":2999,
+        "Quantity":1,
+        "imgsrc":"../Imgs/shop3.jpg"
+    },
+    {   
+        "id":4,
+        "ProductName":"Gloughs",
+        "Price":999,
+        "Quantity":1,
+        "imgsrc":"../Imgs/shop4.jfif"
+    },
+    {   
+        "id":5,
+        "ProductName":"Trousers",
+        "Price":2999,
+        "Quantity":1,
+        "imgsrc":"../Imgs/shop5.jpg"
+    },
+    {   
+        "id":6,
+        "ProductName":"Hat",
+        "Price":99,
+        "Quantity":1,
+        "imgsrc":"../Imgs/shop6.jpg"
+    },
+    {   
+        "id":7,
+        "ProductName":"Travelling Shoes",
+        "Price":1279,
+        "Quantity":1,
+        "imgsrc":"../Imgs/shop7.jpg"
+    },
+    {   
+        "id":8,
+        "ProductName":"Side Bag",
+        "Price":1200,
+        "Quantity":1,
+        "imgsrc":"../Imgs/shop8.jpg"
+    },
+    {   
+        "id":9,
+        "ProductName":"Swimmmimg Goggles",
+        "Price":1300,
+        "Quantity":1,
+        "imgsrc":"../Imgs/shop9.jfif"
+    },
+    {   
+        "id":10,
+        "ProductName":"Swimming Jacket",
+        "Price":2000,
+        "Quantity":1,
+        "imgsrc":"../Imgs/shop10.jpeg"
+    },
+    {   
+        "id":11,
+        "ProductName":"Swim Suit",
+        "Price":3000,
+        "Quantity":1,
+        "imgsrc":"../Imgs/shop11.jpg"
+    },
+    {   
+        "id":12,
+        "ProductName":"Cap",
+        "Price":300,
+        "Quantity":1,
+        "imgsrc":"../Imgs/shop12.jpeg"
+    },
+    {   
+        "id":13,
+        "ProductName":"Denim Jacket",
+        "Price":1499,
+        "Quantity":1,
+        "imgsrc":"../Imgs/shop13.jpg"
+    },
+    {   
+        "id":14,
+        "ProductName":"Black Denim Jacket",
+        "Price":1299,
+        "Quantity":1,
+        "imgsrc":"../Imgs/shop14.jpeg"
+    },
+    {   
+        "id":15,
+        "ProductName":"Ladies Top",
+        "Price":499,
+        "Quantity":1,
+        "imgsrc":"../Imgs/shop15.jpg"
+    },
+    {   
+        "id":16,
+        "ProductName":"Shirt",
+        "Price":799,
+        "Quantity":1,
+        "imgsrc":"../Imgs/shop16.jfif"
+    },
+    {   
+        "id":17,
+        "ProductName":"Traditional for Men",
+        "Price":2999,
+        "Quantity":1,
+        "imgsrc":"../Imgs/shop17.png"
+    },
+    {   
+        "id":18,
+        "ProductName":"Traditional for Women",
+        "Price":3999,
+        "Quantity":1,
+        "imgsrc":"../Imgs/shop18.jpg"
+    },
+    {   
+        "id":19,
+        "ProductName":"Jwellery",
+        "Price":1999,
+        "Quantity":1,
+        "imgsrc":"../Imgs/shop19.jpg"
+    },
+    {   
+        "id":20,
+        "ProductName":"Jeans Combo",
+        "Price":1999,
+        "Quantity":1,
+        "imgsrc":"../Imgs/shop20.jfif"
+    }
+   
+]
+}
