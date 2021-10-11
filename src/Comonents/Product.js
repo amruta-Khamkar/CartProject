@@ -58,52 +58,46 @@ export class Product extends Component {
 
     empty=(()=>{
         let quan = JSON.parse(localStorage.getItem('myQuan'));
-        // console.log(didi)
-        let arr = JSON.parse(localStorage.getItem('myCart'));
+       let arr = JSON.parse(localStorage.getItem('myCart'));
+        if(window.confirm("Are You Sure You want to clear the cart ?")){
 
-        quan=[];
-        arr=[];
-        localStorage.setItem('myQuan', JSON.stringify(quan));
-        localStorage.setItem('myCart', JSON.stringify(arr));
-        document.getElementById("cart").style.display="none";
-      
-            let sum = 0;
-            for (let i = 0; i < quan.length; i++) {
-                sum = sum + quan[i]
-            }
-        this.setState({length:sum});
+            quan=[];
+            arr=[];
+            localStorage.setItem('myQuan', JSON.stringify(quan));
+            localStorage.setItem('myCart', JSON.stringify(arr));
+            document.getElementById("cart").style.display="none";
+          
+                let sum = 0;
+                for (let i = 0; i < quan.length; i++) {
+                    sum = sum + quan[i]
+                }
+            this.setState({length:sum});
+        }
       
     })
     render() {
-        let didi = JSON.parse(localStorage.getItem('myQuan'));
-        // console.log(didi)
+        let quan = JSON.parse(localStorage.getItem('myQuan'));
         let arr = JSON.parse(localStorage.getItem('myCart'));
         return (
             <div>
+                <h1 style={{textAlign:"center"}}>Click on cart to see added products</h1>
                 <ul className="nav">
+
                     <li className="nav-item">
-                        <a className="nav-link active" aria-current="page">Home</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link">About</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#cart">Cart <span className="bg-primary text-white p-1 px-2">{this.state.length}</span></a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link disabled">Contact</a>
+                        <a className="nav-link" href="#cart">Cart <span className="bg-primary text-white p-1 px-2">{this.state.length}</span>
+                        </a>
                     </li>
                 </ul>
                 {this.state.productData.map(json =>
-                    <div className="card-body block">
-                        <img className="card-img-top imgs" height=" 300px" src={`./myimages/${json.imgsrc}`} alt="image not found"></img>
-                        <h4 className="card-title">{json.ProductName}</h4>
-                        <div className="card-text">
+                    <div key={Math.random()} className="card-body block">
+                        <img key={Math.random()} className="card-img-top imgs" height=" 300px" src={json.imgsrc} alt=" "></img>
+                        <h4 key={Math.random()} className="card-title">{json.ProductName}</h4>
+                        <div key={Math.random()}  className="card-text">
                             Price : <span style={{ color: "red", fontSize: "large", fontWeight: "bold" }}>Rs. {json.Price}</span><br />
 
-                            {didi == null ? <p>Quantity : 0</p> : <p>Quantity: {didi[arr.indexOf(json.id)]} </p>}
+                            {quan == null ? <p>Quantity : 0</p> : <p>Quantity: {quan[arr.indexOf(json.id)]} </p>}
                         </div>
-                        <a onClick={() => this.addCard(json.id, json.Quantity)} className="btn btn-primary">Add To Cart</a>
+                        <a  key={Math.random()} onClick={() => this.addCard(json.id, json.Quantity)} className="btn btn-primary">Add To Cart</a>
                     </div>
                 )}
 
@@ -115,18 +109,18 @@ export class Product extends Component {
                         arr != null ?
                             arr.map((h,index) =>
                                <span key={index} id="pro">
-                                    <div className="card-body" id="blocks">
-                                        <img className="card-img-top imgs" height=" 300px" src={json.Products[h - 1].imgsrc} alt="image not found"></img>
-                                        <h4 className="card-title">{json.Products[h - 1].ProductName}</h4>
-                                        <div className="card-text">
+                                    <div key={Math.random()} className="card-body" id="blocks">
+                                        <img key={Math.random()} className="card-img-top imgs" height=" 300px" src={json.Products[h - 1].imgsrc} ></img>
+                                        <h4 key={Math.random()} className="card-title">{json.Products[h - 1].ProductName}</h4>
+                                        <div key={Math.random()} className="card-text">
                                             Price : <span style={{ color: "red", fontSize: "18px", fontWeight: "bold" }}>{json.Products[h - 1].Price}</span><br />
-                                            <p>Quantity : <span style={{ color: "red", fontSize: "large", fontWeight: "bold" }}>{didi[arr.indexOf(h)]} </span></p>
+                                            <p>Quantity : <span style={{ color: "red", fontSize: "large", fontWeight: "bold" }}>{quan[arr.indexOf(h)]} </span></p>
                                         </div>
-                                        <h4>Total Price: <span style={{ color: "red", fontSize: "large", fontWeight: "bold" }}>{didi[arr.indexOf(h)]*json.Products[h-1].Price}</span> <span style={{ color: "red", fontSize:"21px"}}>Rs </span></h4>
+                                        <h4 key={Math.random()} >Total Price: <span style={{ color: "red", fontSize: "large", fontWeight: "bold" }}>{quan[arr.indexOf(h)]*json.Products[h-1].Price}</span> <span style={{ color: "red", fontSize:"21px"}}>Rs </span></h4>
                                     </div></span>
                                    
 
-                            ) : <h1 style={{ color: "red", textAlign: "center" }}>No Data To Display Please add some products in cart</h1>
+                            ) : <h1  key={Math.random()} style={{ color: "red", textAlign: "center" }}>No Data To Display Please add some products in cart</h1>
 
                     }
                 </div>
