@@ -26,7 +26,7 @@ function App() {
         <Route path="/" exact component={List} />
         <Route path="/vali" exact component={Validations} />
         <Route path="/pro" exact component={Product} />
-      </Switch> */}
+      </Switch> */}  
     {/* </Router> */}
     <Product/>
     </>
